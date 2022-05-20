@@ -23,9 +23,11 @@
 // Will I ever be given anything other than a string? What to do about special characters?
 
 function correctPolishLetters(str) {
+  //Create an object of diacritic and non-diacritic numbers
   let polDiacritics = {
     ą: "a",
     ć: "c",
+    ę: "e",
     ł: "l",
     ń: "n",
     ó: "o",
@@ -33,23 +35,23 @@ function correctPolishLetters(str) {
     ź: "z",
     ż: "z",
   };
+  // look through object for diacritics
+
+  //conditional to replace diacritics
+
+  // if not a diacritic return letter
+
+  // join string back together
+
+  // R: Return a string that has no diacritics.
+
+  // E:
   return str
-    .split(" ")
+    .split("")
     .map((e) => polDiacritics[e] || e)
-    .join(" ");
+    .join("");
 }
-// look through array for diacritics
 
-//conditional to replace diacritics
-
-// if not a diacritic return letter
-
-// join string back together
-
-// R: Return a string that has no diacritics.
-
-// E:
-
-console.log(unPolished("Jędrzej Błądziński")), "Jedrzej Bladzinski";
-console.log("Michael is awesome!"), "Michael is awesome!";
+console.log(correctPolishLetters("Jędrzej Błądziński")), "Jedrzej Bladzinski";
+console.log("You did it!"), "You dit it!";
 console.log(" "), " ";
